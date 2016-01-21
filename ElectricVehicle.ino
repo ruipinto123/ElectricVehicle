@@ -34,12 +34,13 @@ void setup() {
 }
 
 void loop() {
-  static int state = false;
+ // static int state = false;
   static unsigned long lastChange = 0;
   static int lastResetPinVal = HIGH;
   static int isRunning = false;
   static unsigned long targetCount = TICK_COUNT;
   static bool runCW = true;
+  
 
   // Flash the built in led on pin 13 each second to indicate all is going well.
   if(millis() - lastChange > 1000)
